@@ -15,30 +15,53 @@
         <!-----Schedulte Form----->
         <form id="appointment-form" >
             <fieldset>
-                <legend>Appointment schedulte</legend>
+                <legend>Appointment schedule</legend>
                 <div class="form-group">
                     <label for="name">Name:</label>
-                    <input type="text" placeholder="Full Name" id="name" required />
+                    <input 
+                        type="text" 
+                        id="name" 
+                        placeholder="Full Name" 
+                        required 
+                    />
                     <div class="error" id="name-error"></div>
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" placeholder="Your Email" required />
+                    <input 
+                        type="email" 
+                        id="email" 
+                        placeholder="Your Email" 
+                        required />
                     <div class="error" id="email-error"></div>
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone:</label>
-                    <input type="tel" placeholder="Your Phone Number" id="phone" required />
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        placeholder="Your Phone Number" 
+                        required />
                     <div class="error" id="phone-error"></div>
                 </div>
                 <div class="form-group">
                     <label for="appointment-date">Date:</label>
-                    <input type="text" placeholder="Select Date" id="appointment-date" class="flatpickr" required />
+                    <input 
+                        type="text" 
+                        placeholder="Select Date"
+                        id="appointment-date" 
+                        class="flatpickr" 
+                        required />
                     <div class="error" id="date-error"></div>
                 </div>
                 <div class="form-group">
                     <label for="appointment-time">Time:</label>
-                    <input type="text" placeholder="Select Time" id="appointment-time" class="flatpickr" required />
+                    <input 
+                        type="text" 
+                        placeholder="Select Time" 
+                        id="appointment-time" 
+                        class="flatpickr" 
+                        required />
                     <div class="error" id="time-error"></div>
                 </div>
                 <div class="form-group">
@@ -78,13 +101,17 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="captcha">Captcha</label>
-                    <input type="text" placeholder="Your Answer" id="captcha" required />
+                    <label for="captcha">Captcha: 2 + 7 = ?</label>
+                    <input 
+                        type="text" 
+                        placeholder="Your Answer" 
+                        id="captcha" 
+                        required />
                     <div class="error" id="captcha-error"></div>
                 </div>
                 <div class="form-group">
                     <label for="provider">Provider:</label>
-                    <select id="provider">
+                    <select id="provider" required>
                         <option value="">Select a Provider</option>
                         <option value="provider1">Provider 1</option>
                         <option value="provider2">Provider 2</option>
@@ -95,6 +122,7 @@
                 <button type="submit">Confirm Appointment</button>
             </fieldset>
         </form><!-----// Schedule Form \\----->
+
         <!-----Appointment Confirmation Note ----->
         <div class="hidden" id="confirmation">
             <h2>Appointment Confirmation</h2>
@@ -103,10 +131,10 @@
                 <span id="confirm-date"></span> at <span id="confirm-time"></span> .
             </p>
             <p>A confirmation has been sent to <span id="confirm-email"></span> .</p>
-            <p>We will contact you at <span id="confirm-phone"></span> </p>
+            <p>We will contact you at <span id="confirm-phone"></span> .</p>
             <p>Notes: <span id="confirm-notes"></span> </p>
         </div>
-    </div>
+    </div> <!-----// Appointment Confirmation Note \\----->
 
     <!-----Script----->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js" 
