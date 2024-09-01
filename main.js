@@ -123,5 +123,22 @@ function authenticateGoogleCalendar() {
 //Add Event to google Calendar
 
 function addEventToGoogleCalendar(date, time, service) {
-    const event = {};
+    const event = {
+        summary: `Appointment: ${service}`,
+        start: {
+            dateTime: `${date} T${time}:00`,
+            timezone: `Europe/Berlin`
+        },
+        end: {
+            dateTime: `${date} T${time}:00`,
+            timezone: `Europe/Berlin`
+        }
+    };
+
+    gapi.client.calendar.events.insert({
+        calendaId: 'primary',
+        resourse: event
+    }).then(response => {
+        console.log('Event created:', response);
+    });
 }
