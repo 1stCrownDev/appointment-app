@@ -106,3 +106,22 @@ function scheduleReminder(email, date, time) {
         sendEmailReminder(email, date, time);
     }, reminderTime - new Date());
 }
+
+//logic to send email reminder
+function sendEmailReminder(email, date, time) {
+    console.log(`Reminder: Appointment on ${date} at ${time}`);
+}
+
+//GoogleCalendar
+
+function authenticateGoogleCalendar() {
+    gapi.auth2.getAuthInstance().signIn().then(() => {
+        console.log('Signed in');
+    });
+}
+
+//Add Event to google Calendar
+
+function addEventToGoogleCalendar(date, time, service) {
+    const event = {};
+}
