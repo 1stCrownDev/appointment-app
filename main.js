@@ -95,3 +95,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 })
+
+//Schedule Reminder
+
+function scheduleReminder(email, date, time) {
+    const appointmentDateTime = new Date(`${date} T${time}`);
+    const reminderTime = new Date(appointmentDateTime.getTime() - 24 * 60 * 60 * 1000);
+
+    setTimeout(() => {
+        sendEmailReminder(email, date, time);
+    }, reminderTime - new Date());
+}
